@@ -2,11 +2,12 @@ package com.iffat.springboot.di.repositories;
 
 import com.iffat.springboot.di.models.Product;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Component
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
     private List<Product> data;
 
