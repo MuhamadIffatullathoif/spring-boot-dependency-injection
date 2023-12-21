@@ -1,7 +1,7 @@
 package com.iffat.springboot.di.services;
 
 import com.iffat.springboot.di.models.Product;
-import com.iffat.springboot.di.repositories.ProductRepositoryImpl;
+import com.iffat.springboot.di.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
-    private ProductRepositoryImpl repository;
+    private ProductRepository repository;
 
     @Override
     public List<Product> findAll() {
