@@ -2,6 +2,7 @@ package com.iffat.springboot.di.controllers;
 
 import com.iffat.springboot.di.models.Product;
 import com.iffat.springboot.di.services.ProductServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,8 @@ import java.util.List;
 @RequestMapping("/api")
 public class SomeController {
 
-    private ProductServiceImpl productService = new ProductServiceImpl();
+    @Autowired
+    private ProductServiceImpl productService;
 
     @GetMapping
     public List<Product> list() {
