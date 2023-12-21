@@ -4,11 +4,13 @@ import com.iffat.springboot.di.models.Product;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Primary
+@RequestScope
 @Repository
 public class ProductRepositoryImpl implements ProductRepository {
     private List<Product> data;
