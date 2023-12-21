@@ -14,6 +14,17 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductRepository repository;
 
+    /* Constructor injection can use annotation autowired or no */
+//    public ProductServiceImpl(ProductRepository repository) {
+//        this.repository = repository;
+//    }
+
+    /* Setter Injection required autowired annotation */
+//    @Autowired
+//    public void setRepository(ProductRepository repository) {
+//        this.repository = repository;
+//    }
+
     @Override
     public List<Product> findAll() {
         return repository.findAll().stream().map(product -> {
