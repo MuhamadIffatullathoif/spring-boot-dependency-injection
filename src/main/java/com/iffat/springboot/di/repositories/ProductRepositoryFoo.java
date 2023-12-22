@@ -11,11 +11,11 @@ import java.util.List;
 public class ProductRepositoryFoo implements ProductRepository{
     @Override
     public List<Product> findAll() {
-        return Collections.singletonList(new Product(1L, "Mouse", 300L));
+        return Collections.singletonList(new Product("6584cb81418538663e87d12c", "Mouse", 300L));
     }
 
     @Override
-    public Product findById(Long id) {
-        return new Product(1L, "Mouse", 300L);
+    public Product findById(String id) {
+        return new Product("6584cb817ee9820fb1e6b25b", "Mouse", 300L);
     }
 }

@@ -19,10 +19,10 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     public ProductRepositoryImpl() {
         this.data = Arrays.asList(
-                new Product(1L, "Mouse", 200L),
-                new Product(2L, "Keyboard", 300L),
-                new Product(3L, "Monitor", 1000L),
-                new Product(4L, "Motherboard", 1500L)
+                new Product("6584cb811d74f2d6d9c83c42", "Mouse", 200L),
+                new Product("6584cb816b275e90ffbdf248", "Keyboard", 300L),
+                new Product("6584cb8197fc2f7437936a2c", "Monitor", 1000L),
+                new Product("6584cb81418538663e87d12c", "Motherboard", 1500L)
         );
     }
 
@@ -32,7 +32,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public Product findById(Long id) {
+    public Product findById(String id) {
         return data.stream().filter(product -> product.getId().equals(id)).findFirst().orElse(null);
     }
 }

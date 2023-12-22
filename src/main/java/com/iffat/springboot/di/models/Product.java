@@ -1,24 +1,24 @@
 package com.iffat.springboot.di.models;
 
 public class Product implements Cloneable{
-    private Long id;
+    private String id;
     private String name;
     private Long price;
 
     public Product() {
     }
 
-    public Product(Long id, String name, Long price) {
+    public Product(String id, String name, Long price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

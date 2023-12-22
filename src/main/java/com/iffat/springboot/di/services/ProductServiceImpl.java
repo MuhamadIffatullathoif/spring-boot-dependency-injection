@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService{
     // private Environment environment;
 
     @Autowired
-    @Qualifier("productRepositoryFoo")
+    @Qualifier("productRepositoryJson")
     private ProductRepository repository;
 
     @Value("${config.price.tax}")
@@ -48,7 +48,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public Product findById(Long id) {
+    public Product findById(String id) {
         return repository.findById(id);
     }
 }

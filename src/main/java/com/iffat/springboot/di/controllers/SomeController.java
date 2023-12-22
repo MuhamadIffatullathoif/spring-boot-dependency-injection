@@ -23,7 +23,7 @@ public class SomeController {
     }
 
     @GetMapping("/{id}")
-    public Product show(@PathVariable Long id) {
+    public Product show(@PathVariable String id) {
         return productService.findById(id);
     }
 }
